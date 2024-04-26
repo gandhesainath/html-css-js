@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function f1(){
+            const l=length1.value;
+            const b=bredth1.value;
+            if (b==l) {
+                lbl.innerHTML="It is square";
+            }
+            else{
+                lbl.innerHTML="It is not a square";
+            }
+        }
+    </script>
+    <input type="text" placeholder="Enter the length" id="length1">
+    <br>
+    <input type="text" placeholder="Enter the bredth" id="bredth1">
+    <br>
+    <button onclick="f1()">submit</button>
+    <br>
+    <label id="lbl"></label>
+</body>
+</html>

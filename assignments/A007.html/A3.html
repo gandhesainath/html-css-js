@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function f1(){
+            const a=Number(t1.value)
+            const b=Number(t2.value)
+            const c=Number(t3.value)
+            if(a>b && a>c){
+                lbl.innerHTML= `${a} number is largest number`
+            }
+            else if(b>a && b>c){
+                lbl.innerHTML=`${b} number is largest number`
+            }
+            else if(c>a && c>b){
+                lbl.innerHTML=` ${c} number is largest number`
+            }
+            else{
+                lbl.innerHTML="nothing is largest number"
+            }
+        }
+    </script>
+    <input type="number" placeholder="Enter the first number" id="t1">
+    <br>
+    <input type="number" placeholder="Enter the second number" id="t2">
+    <br>
+    <input type="number" placeholder="Enter the third number" id="t3">
+    <br>
+    <button onclick="f1()">submit</button>
+    <br>
+    <label id="lbl"></label>
+</body>
+</html>

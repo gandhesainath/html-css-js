@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function f1(){
+            const n=t1.value;
+            if(n>0){
+                lbl.innerHTML="positive number"
+            }
+            else if(n<0){
+                lbl.innerHTML="negitive number"
+            }
+            else{
+                lbl.innerHTML="not a negitve or positive number"
+            }
+        }
+    </script>
+    <input type="number" placeholder="Enter a number" id="t1">
+    <br>
+    <button onclick="f1()">submit</button>
+    <br>
+    <label id="lbl"></label>
+</body>
+</html>
