@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function f1(){
+            let a=Number(t1.value)
+            if(a<25){
+                lbl.innerHTML="Grade F"
+            }
+            else if(a>=25 && a<45){
+                lbl.innerHTML="Grade E"
+            }
+            else if(a>=45 && a<50){
+                lbl.innerHTML="Grade D"
+            }
+            else if(a>=50 && a<60){
+                lbl.innerHTML="Grade C"
+            }
+            else if(a>=60 && a<80){
+                lbl.innerHTML="Grade B"
+            }
+            else if(a>=80){
+                lbl.innerHTML="Grade A"
+            }
+        }
+    </script>
+    <input type="number" id="t1" placeholder="Enter the marks obtained">
+    <br>
+    <button onclick="f1()">submit</button>
+    <br>
+    <label id="lbl">Grade will be displayed here</label>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        let add = () =>{
+            let a=Number(t1.value)
+            let b=Number(t2.value)
+            lbl.innerHTML=`sum is ${a+b}`
+        }
+        let sub = () =>{
+            let a=Number(t1.value)
+            let b=Number(t2.value)
+            lbl.innerHTML=`sub is ${a-b}`
+        }
+        let mul = () =>{
+            let a=Number(t1.value)
+            let b=Number(t2.value)
+            lbl.innerHTML=`mul is ${a*b}`
+        }
+        let div = () =>{
+            let a=Number(t1.value)
+            let b=Number(t2.value)
+            lbl.innerHTML=`div is ${a/b}`
+        }
+    </script>
+
+    <input type="number" id="t1" placeholder="Enter the 1nd number">
+    <br>
+    <input type="number" id="t2" placeholder="Enter the 2nd number">
+    <br>
+    <button onclick="add()">addition</button>
+    <br>
+    <button onclick="sub()">substraction</button>
+    <br>
+    <button onclick="mul()">multipication</button>
+    <br>
+    <button onclick="div()">division</button>
+    <br>
+    <label id="lbl">answer will be displayed here</label>
+</body>
+</html>
