@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        font-family: Helvetica, Arial, sans-serif;
+        box-sizing: border-box;
+        background-color:rgba(241, 242, 247, 0.806);
+    }
+    .main,.signup{
+        position: absolute;
+    }
+    .main{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding: 15%;
+        margin-left:-4%;
+        justify-content: space-around;
+    }
+    .main h1{
+        color:rgba(18, 30, 254, 0.874);
+        
+    }
+    .one {
+        font-size: 25px;
+        width: 50%;
+        height: 100%;
+    }
+    .one h1{
+        background-color:rgba(241, 242, 247, 0.806) ;
+    }
+    .two{
+        width: 50%;
+        height: 100%;
+    }
+    .login{
+        width: 80%;
+        height: 380px;
+        background-color: white;
+        border: solid 1px rgb(236, 233, 233);
+        border-radius: 10px ;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-left: 30%;
+        margin-top:-15%;
+        }
+    .login input{
+        width: 100%;
+        height: 50px;
+        border: solid 1px rgb(203, 202, 202);
+        border-radius: 8px;
+        padding: 10px;
+        background-color:white;
+    }
+    .login .in{
+        width: 100%;
+        height: 52px;
+        border: none;
+        border-radius: 8px;
+        padding: 10px;
+        background-color:rgb(41, 101, 253);
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .login p{
+        background-color: white;
+        color: blue;
+    }
+    .login div{
+        background-color: white;
+    }
+    .p{
+        margin-left: 38%;
+        margin-right: -10%;
+        font-size: small;
+    }
+    .create{
+        width: 70%;
+        height: 52px;
+        border-radius: 8px;
+        padding: 10px;
+        background-color:rgb(49, 185, 49);
+        color: white;
+        font-size: 15px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .signup{
+        display: none;
+        width: 100%;
+    }
+    .form {
+        width: 35%;
+        height:50%;
+        background-color: white;
+        border: solid 1px rgb(236, 233, 233);
+        border-radius: 10px ;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-left:33%;
+    }
+    .h{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .form div,h1,span{
+        background-color: white;
+    }
+    #login{
+        cursor: pointer;
+    }
+    .form p{
+        font-size: small;
+        background-color: white;
+    }
+    .form select{
+        width:30%;
+        border: solid 1px rgb(203, 202, 202);
+        border-radius: 8px;
+        background-color: white;
+        padding: 10px;
+
+    }
+    .name{
+        width: 48%;
+        height: 40px;
+        border: solid 1px rgb(203, 202, 202);
+        border-radius: 8px;
+        padding: 10px;
+    }
+    .mail{
+        width: 98%;
+        height: 40px;
+        border: solid 1px rgb(203, 202, 202);
+        border-radius: 8px;
+        padding: 10px;
+    }
+    .gender span{
+        width:30%;
+        border: solid 1px rgb(203, 202, 202);
+        border-radius: 8px;
+        background-color: white;
+        padding: 10px;
+    }
+    .gender{
+        justify-content: space-around;
+        display: flex;
+    }
+    .small{
+        font-size:xx-small;
+    }
+    .up{
+        width: 70%;
+        height: 52px;
+        border-radius: 8px;
+        padding: 10px;
+        background-color:rgb(49, 185, 49);
+        color: white;
+        font-size: 15px;
+        border: none;
+        margin-left: 15%;
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="one">
+            <h1>facebook</h1>
+            Facebook helps you connect and share with the people in your life.
+        </div>
+        <div class="two">
+            <div class="login">
+                <div id="display"></div>
+                <br>
+                <input type="email" placeholder="Email address or phone number" id="t1">
+                <br>
+                <br>
+                <input type="password" placeholder="password" id="t2">
+                <br>
+                <br>
+                <button class="in" onclick="check()">Log in</button>
+                <br>
+                <br>
+                <center>
+                <div>
+                <p>Forgotten password?</p>
+                <br>
+                <hr>
+                <br>
+                <button type="button"  onclick="show()" class="create" >create new account</button>
+                </div>
+                </center>
+            </div>
+            <br>
+            <br>
+            <p class="p"><b>Create a page</b>  for a celebrity, brand or business.</P>
+            <div class="hide"></div>
+        </div>
+    </div>
+    <div class="signup" id="signup">
+        <div class="form">
+            <div class="h">
+            <div>
+            <h1>Sign Up</h1>
+            It's quick and easy.
+            </div>
+            <div>
+            <span class="material-symbols-outlined cross" onclick="hide()" id="login">
+                close
+            </span>
+            </div>
+            </div>
+            <hr>
+            <br>
+            <input type="text" placeholder="First name" class="name">
+            <input type="text" placeholder="Surame" class="name">
+            <br>
+            <br>
+            <input type="email" placeholder="Mobile number or email address" class="mail">
+            <br>
+            <br>
+            <input type="password" placeholder="new password" class="mail">
+            <br>
+            <br>
+            <p>Date of birth</p>
+            <br>
+            <select name="date" id="date">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+            </select>
+            <select name="month" id="month" required>
+                <option value="jan">Jan</option>
+                <option value="feb">Feb</option>
+                <option value="mar">Mar</option>
+                <option value="apr">Apr</option>
+                <option value="may">May</option>
+                <option value="jun">Jun</option>
+                <option value="jul">Jul</option>
+                <option value="aug">Aug</option>
+                <option value="sep">Sep</option>
+                <option value="oct">Oct</option>
+                <option value="nov">Nov</option>
+                <option value="dec">Dec</option>
+            </select>
+            <select name="year" id="year" required>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+            </select>
+            </select>
+            <br>
+            <br>
+            <p>Gender</p>
+            <br>
+            <div class="gender">
+            <span>
+            Female<input type="radio" name="gender" value="Female">
+            </span>
+            <span >
+                Male<input type="radio" name="gender" value="Male">
+            </span>
+            <span>
+                Custom<input type="radio" name="gender" value="Custom">
+            </span>
+            </div>
+            <br>
+            <p class="small">People who use our service may have uploaded your contact information to Facebook. Learn more.</p>
+            <br>
+            <p class="small">By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS  us and can opt out at any time.
+            </p> 
+            <br>
+            <button class="up">
+                sign up
+            </button>
+        </div>
+    </div>
+    <script>
+        var signup = document.getElementById("signup")
+        function show(){
+            signup.style.display='block';
+        }
+        function hide(){
+            signup.style.display='none';
+        }
+        function check(){
+            let mail=document.getElementById("t1").value
+            let pass=document.getElementById("t2").value
+            if(mail==="john@gmail.com"&& pass==="1234"){
+                display.innerHTML="Hello john!"
+            }
+            else{
+                display.innerHTML="Try again!"
+            }
+        }
+    </script>
+</body>
+</html>
