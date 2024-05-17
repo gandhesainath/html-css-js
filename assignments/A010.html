@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        height: 200px;
+        border:solid 1px ;
+        border-radius: 5px;
+        width: 300px;
+        background-color: rgba(196, 27, 27, 0.114);
+        margin-left: 35%;
+        margin-top: 13%;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .main button{
+        width: 100px;
+        height: 40px;
+        cursor: pointer;
+    }
+    .level-1{
+        height: 300px;
+        border:solid 1px ;
+        border-radius: 5px;
+        width: 300px;
+        background-color: rgba(196, 27, 27, 0.114);
+        margin-left: 35%;
+        margin-top: 13%;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+    .level-1 button{
+        width: 100px;
+        height: 40px;
+        cursor: pointer;
+    }
+    .level-1 input{
+        width: 150px;
+        height: 40px;
+    }
+</style>
+<body>
+    <div class="main" id="main">
+        <h1> Math Quiz</h1>
+        <h2>select level</h2>
+        <button onclick="level()">level-1</button>
+        <button >level-2</button>
+    </div>
+    <div class="level-1" id="level-1" >
+        <h1> Math Quiz</h1>
+        <h2>level-1</h2>
+        <div id="t1"></div>
+        <br>
+        <div id="t2"></div>
+        <br>
+        <input type="number" placeholder="Enter the answer" id="i1">
+        <br>
+        <br>
+        <button onclick="check()">submit</button>
+        <button onclick="level()">skip/next</button>        
+    </div>
+    <script>
+        var main = document.getElementById("main")
+        var level1 = document.getElementById("level-1")
+        var level2 = document.getElementById("level-2")
+           
+        function level(){
+            var x = Math.random()*10;
+            var y = Math.random()*10;
+            var a = Math.round(x);
+            var b = Math.round(y);
+            var c = a+b
+            main.style.display='none';
+            level1.style.display='block';
+            t1.innerHTML=`${a}+${b}`
+            return c
+        }   
+
+        function check(){
+            var d = document.getElementById("i1").value
+            if(c==d){
+                t2.innerHTML='correct!'
+            }
+            else{
+                t2.innerHTML='try again!'
+            }
+        }  
+
+    </script>
+</body>
+</html>
