@@ -22,7 +22,7 @@
         height: 40px;
         cursor: pointer;
     }
-    .level-1{
+    .level-1,.level-2{
         height: 300px;
         border:solid 1px ;
         border-radius: 5px;
@@ -34,35 +34,23 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         display: none;
     }
-    .level-1 button{
-        width: 100px;
-        height: 40px;
-        cursor: pointer;
-    }
-    .level-1 input{
-        width: 150px;
-        height: 40px;
-    }
 </style>
 <body>
     <div class="main" id="main">
         <h1> Math Quiz</h1>
         <h2>select level</h2>
         <button onclick="level()">level-1</button>
-        <button >level-2</button>
+        <button onclick="hard()">level-2</button>
     </div>
     <div class="level-1" id="level-1" >
         <h1> Math Quiz</h1>
         <h2>level-1</h2>
-        <div id="t1"></div>
-        <br>
-        <div id="t2"></div>
-        <br>
-        <input type="number" placeholder="Enter the answer" id="i1">
-        <br>
-        <br>
-        <button onclick="check()">submit</button>
-        <button onclick="level()">skip/next</button>        
+        <div id="t1"></div>      
+    </div>
+    <div class="level-2" id="level-2" >
+        <h1> Math Quiz</h1>
+        <h2>level-2</h2>
+        <div id="t2"></div>       
     </div>
     <script>
         var main = document.getElementById("main")
@@ -70,27 +58,33 @@
         var level2 = document.getElementById("level-2")
            
         function level(){
-            var x = Math.random()*10;
-            var y = Math.random()*10;
-            var a = Math.round(x);
-            var b = Math.round(y);
-            var c = a+b
             main.style.display='none';
             level1.style.display='block';
-            t1.innerHTML=`${a}+${b}`
-            return c
+            t1.innerHTML=`${Math.round(Math.random()*10)}+${Math.round(Math.random()*10)} <br>
+            ${Math.round(Math.random()*10)}+${Math.round(Math.random()*10)}<br>
+            ${Math.round(Math.random()*10)}+${Math.round(Math.random()*10)}<br>
+            ${Math.round(Math.random()*10)}+${Math.round(Math.random()*10)}<br>
+            ${Math.round(Math.random()*10)}+${Math.round(Math.random()*10)}<br>
+            ${Math.round(Math.random()*10)}+${Math.round(Math.random()*10)}<br>
+            ${Math.round(Math.random()*10)}+${Math.round(Math.random()*10)}<br>
+            ${Math.round(Math.random()*10)}+${Math.round(Math.random()*10)}<br>
+            ${Math.round(Math.random()*10)}+${Math.round(Math.random()*10)}<br>
+            ${Math.round(Math.random()*10)}+${Math.round(Math.random()*10)}`
         }   
-
-        function check(){
-            var d = document.getElementById("i1").value
-            if(c==d){
-                t2.innerHTML='correct!'
-            }
-            else{
-                t2.innerHTML='try again!'
-            }
-        }  
-
+        function hard(){
+            main.style.display='none';
+            level2.style.display='block';
+            t2.innerHTML=`${Math.round(Math.random()*100)}+${Math.round(Math.random()*100)} <br>
+            ${Math.round(Math.random()*100)}+${Math.round(Math.random()*100)}<br>
+            ${Math.round(Math.random()*100)}+${Math.round(Math.random()*100)}<br>
+            ${Math.round(Math.random()*100)}+${Math.round(Math.random()*100)}<br>
+            ${Math.round(Math.random()*100)}+${Math.round(Math.random()*100)}<br>
+            ${Math.round(Math.random()*100)}+${Math.round(Math.random()*100)}<br>
+            ${Math.round(Math.random()*100)}+${Math.round(Math.random()*100)}<br>
+            ${Math.round(Math.random()*100)}+${Math.round(Math.random()*100)}<br>
+            ${Math.round(Math.random()*100)}+${Math.round(Math.random()*100)}<br>
+            ${Math.round(Math.random()*100)}+${Math.round(Math.random()*100)}`
+        }
     </script>
 </body>
 </html>
