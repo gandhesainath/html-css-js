@@ -1,0 +1,68 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 10px;
+    align-items: center;
+}
+.head span{
+    cursor: pointer;
+}
+.line{
+    border:1px solid;
+    height: 1px;
+    width:53%;
+}
+.products{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 65%;
+    height: 100%;
+}
+.product{
+    height: 250px;
+    width: 200px;
+    border: solid 1px gainsboro;
+    border-color: silver;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: silver;
+    margin: 5px;
+}
+.product img{
+    height: 200px;
+    width: 100%;
+}
+.product .info{
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.product .info .price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 18px;
+    padding: 3px;
+}
+.product .info button{
+    cursor: pointer;
+    padding: 1px;
+}
